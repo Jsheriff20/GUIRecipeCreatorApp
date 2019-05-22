@@ -100,7 +100,7 @@ string getDescription() {
 	cout << endl << "Enter description about ingredients (eg: finely diced) OR press 'ENTER' to skip: " << flush;
 	getline(cin, description);
 
-	.
+	
 	//clear the screen
 	std::system("cls");
 
