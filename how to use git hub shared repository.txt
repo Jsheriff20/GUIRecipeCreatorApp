@@ -1,1 +1,15 @@
 https://www.youtube.com/watch?v=0fKg7e37bQE
+
+open console
+go to directory using the command "cd"
+do "git status" if nothing shows up this is not a git repository
+	if it does then the  red text is what the online repository has
+	and the red text is what you have that isnt uploaded to the online repository
+to upload type "git add" followed by the file you want to add or do "*" to add all 
+	of it eg "git add *" -adds alll files to online repository
+then do "git commit -m "enter message here""   (replace "enter message here" with 
+	a message)
+then do "git push"
+
+to get the online repository files do "git pull" on the device you want the files on
+	whilst inside of the git repository on that computer/ device
