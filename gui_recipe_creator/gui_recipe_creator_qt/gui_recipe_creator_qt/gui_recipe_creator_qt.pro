@@ -27,6 +27,7 @@ CONFIG += c++11
 SOURCES += \
         confirm_final_details.cpp \
         creating_method.cpp \
+        final_infomation.cpp \
         get_ingredients.cpp \
         getting_meal_name.cpp \
         main.cpp \

@@ -3,8 +3,10 @@
 
 #include <QDialog>
 #include "get_ingredients.h"
+#include "confirm_final_details.h"
 
 class get_ingredients;
+class confirm_final_details;
 namespace Ui {
 class creating_method;
 }
@@ -31,6 +33,7 @@ private slots:
 private:
     Ui::creating_method *ui;
     get_ingredients *getting_ingredients;
+    confirm_final_details *confirm_details;
 };
 
 #endif // CREATING_METHOD_H

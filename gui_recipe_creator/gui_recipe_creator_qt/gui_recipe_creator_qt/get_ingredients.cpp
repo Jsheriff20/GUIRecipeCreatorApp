@@ -73,7 +73,6 @@ QString measurement_conversion(QString none_converted_measurement){
     return converted_measurement;
 }
 
-static final_infomation final_info;
 QStringList ingredients_list;
 QString string_list;
 
@@ -138,7 +137,7 @@ void get_ingredients::on_btn_back_2_released(){
         ui->txt_ingredients_list->setText(ingredients_list.join("\n"));
 
         //putting current list in final_infomation class to store for later
-        final_info.set_ingredients_list(string_list);
+        final_infomation::final_meal_name = string_list;
 
 
         ui->cmb_ingredients_list->setCurrentIndex(0);
@@ -147,6 +146,9 @@ void get_ingredients::on_btn_back_2_released(){
         ui->dsb_ingredient_amount->setValue(0.00);
         ui->txt_ingredient_description->setPlainText("");
     }
+
+
+
 }
 
 

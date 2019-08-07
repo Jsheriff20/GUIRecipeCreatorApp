@@ -14,23 +14,26 @@ when user clicks next on method and ingredients page make they confirm the curre
 
 add it so that the user can choose to edit, delete and insert another step after a step number on the method 
 
+add and edit option to the ingredients and method creating forms
+
+add a button that called "Confirm Details", it will be automatically disabled unless the user has clicked an edit button on the...
+final page which will then enable it allowing for it to be clicked and skip the user straight to the final page if they want to.
+
+when method done add it to the final info header
+
+
 LEFT TO DO:
-complete create your method page:
-When form loads the text box will be hidden as well as the "add sub step" button and the lables...
-"adding step" and the "1"
-user will first have to click "add main step" button which will display the text box and the lables...
-"adding step" and the "1"
-they will then enter the first main step then click the button called "completed method step"
-once "completed method step" is clicked it will hide the text box again and show the "add sub step"
-the user can now choose to add step 2 (by clicking add main step) or add step 1.1 (by clicking...
-add sub step)
-Once user click this it will dispaly the text box, the user will enter the info and click completed...
-method step like last time.
-if the user clicked "add sub step" before the text box was shown the step that was just submitted by clicking...
-the "compelted method step" will go down as 1.1 however if the user clicked "add main step"...
-it will go down as 2.
-this will repeat untill next button is clicked.
+complete confirm your meal details:
+
+the current meal name, ingredients list and method will be displayed
+the user can then choose to edit or confirm each one 
+if they confirm one of them the text box will turn from red to green and the edit button will be disabled the
+name of that confirm button will then change to unconfirm if all 3 of the are confirmed the disabled "Complete"
+button will be enabled allowing for the user to click on it however if the user clicks the unconfirm button then it will...
+disable the "complete" button again, that text box will turn red, the edit button will be come enabled and the unconfimed button...
+will become a confirm button. 
+if the user chooses to click edit on one of them then they will get taken to that page to edit it.
 
 
-if the user clicks one of the add step buttons and then types something but then clicks the other add step button
-it will keep the text in the text box however the "adding step: 1" lable will change/ update  
+
+
