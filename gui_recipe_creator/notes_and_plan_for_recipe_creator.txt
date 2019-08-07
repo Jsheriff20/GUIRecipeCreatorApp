@@ -19,8 +19,6 @@ add and edit option to the ingredients and method creating forms
 add a button that called "Confirm Details", it will be automatically disabled unless the user has clicked an edit button on the...
 final page which will then enable it allowing for it to be clicked and skip the user straight to the final page if they want to.
 
-when method done add it to the final info header
-
 
 LEFT TO DO:
 complete confirm your meal details:
