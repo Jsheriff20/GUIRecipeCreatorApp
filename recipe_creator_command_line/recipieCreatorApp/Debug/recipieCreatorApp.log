@@ -1,8 +1,0 @@
-﻿  editIngredientsList.cpp
-c:\users\jacka\desktop\recipiecreatorapp for weekmealapplication\recipiecreatorapp\recipiecreatorapp\recipiecreatorapp\editingredientslist.cpp(30): warning C4018: '<': signed/unsigned mismatch
-  recipieCreatorApp.cpp
-  showImportantMessages.cpp
-c:\users\jacka\desktop\recipiecreatorapp for weekmealapplication\recipiecreatorapp\recipiecreatorapp\recipiecreatorapp\showimportantmessages.cpp(43): warning C4018: '<': signed/unsigned mismatch
-c:\users\jacka\desktop\recipiecreatorapp for weekmealapplication\recipiecreatorapp\recipiecreatorapp\recipiecreatorapp\showimportantmessages.cpp(53): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  recipieCreatorApp.vcxproj -> C:\Users\jacka\Desktop\recipieCreatorApp for WeekMealApplication\recipieCreatorApp\recipieCreatorApp\Debug\recipieCreatorApp.exe
