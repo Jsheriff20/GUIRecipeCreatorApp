@@ -2,6 +2,7 @@
 #include "ui_getting_meal_name.h"
 #include "mainwindow.h"
 #include "final_infomation.h"
+#include "confirm_final_details.h"
 
 
 #include <qmessagebox.h>
@@ -17,7 +18,12 @@ getting_meal_name::getting_meal_name(QWidget *parent) :
 
 
     if(!final_infomation::confirm_details_reached){
-        ui->btn_skip_to_confirmation->hide();
+
+        ui->btn_back_to_confirmation->hide();
+    }else{
+
+        ui->btn_back->hide();
+        ui->btn_next->hide();
     }
 }
 
@@ -33,8 +39,6 @@ void getting_meal_name::on_pushButton_2_released()
     this->hide();
     main_window = new MainWindow(this);
     main_window->show();
-
-
 }
 
 
@@ -67,3 +71,19 @@ void getting_meal_name::on_btn_next_released()
     final_infomation::final_meal_name = meal_name;
 }
 
+
+void getting_meal_name::on_btn_back_to_confirmation_released()
+{
+    this->hide();
+    confirm_details = new confirm_final_details(this);
+    confirm_details->show();
+}
+
+void getting_meal_name::on_btn_back_released()
+{
+    MainWindow *main_window;
+
+    this->hide();
+    main_window = new MainWindow(this);
+    main_window->show();
+}

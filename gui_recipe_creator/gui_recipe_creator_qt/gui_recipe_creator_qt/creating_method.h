@@ -30,6 +30,8 @@ private slots:
 
     void on_btn_next_released();
 
+    void on_btn_back_to_confirmation_released();
+
 private:
     Ui::creating_method *ui;
     get_ingredients *getting_ingredients;

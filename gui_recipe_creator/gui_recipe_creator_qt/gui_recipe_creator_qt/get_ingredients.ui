@@ -938,7 +938,7 @@
     <string>Add Ingredient to list</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_skip_to_confirmation">
+  <widget class="QPushButton" name="btn_back_to_confirmation">
    <property name="geometry">
     <rect>
      <x>780</x>
@@ -953,7 +953,43 @@
     </font>
    </property>
    <property name="text">
-    <string>Skip to Confirmation</string>
+    <string>Back to Confirmation</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_delete">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>350</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_edit">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>350</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Edit</string>
    </property>
   </widget>
  </widget>

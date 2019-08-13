@@ -3,6 +3,7 @@
 #include "getting_meal_name.h"
 #include "final_infomation.h"
 #include "creating_method.h"
+#include "confirm_final_details.h"
 #include <QDebug>
 #include <qmessagebox.h>
 #include <vector>
@@ -19,7 +20,12 @@ get_ingredients::get_ingredients(QWidget *parent) :
 
 
     if(!final_infomation::confirm_details_reached){
-        ui->btn_skip_to_confirmation->hide();
+
+        ui->btn_back_to_confirmation->hide();
+    }else{
+
+        ui->btn_back->hide();
+        ui->btn_next->hide();
     }
 }
 
@@ -175,4 +181,11 @@ void get_ingredients::on_btn_next_released()
     create_method = new creating_method(this);
     create_method->show();
     }
+}
+
+void get_ingredients::on_btn_back_to_confirmation_released()
+{
+    this->hide();
+    confirm_details = new confirm_final_details(this);
+    confirm_details->show();
 }

@@ -13,12 +13,17 @@ creating_method::creating_method(QWidget *parent) :
     ui->setupUi(this);
 
 
-    QStringList method = final_infomation::final_method.split(",");
-    ui->txt_current_method->setText(method.join("\n"));
+    QString current_method;
 
 
     if(!final_infomation::confirm_details_reached){
-        ui->btn_skip_to_confirmation->hide();
+
+        ui->btn_back_to_confirmation->hide();
+
+    }else{
+
+        ui->btn_back->hide();
+        ui->btn_next->hide();
     }
 }
 
@@ -28,10 +33,8 @@ creating_method::~creating_method()
 }
 
 
-QString string_method_list = "";
-QStringList method_list;
 bool its_main_step = true;
-int main_step_count = 0;
+unsigned int main_step_count = 0;
 int sub_step_count = 1;
 
 void creating_method::on_btn_add_method_step_released(){
@@ -41,16 +44,13 @@ void creating_method::on_btn_add_method_step_released(){
         QMessageBox::warning(this, tr("Warning!"), tr("Enter a valid method step!"));
     }else {
 
-        QString method_step = ui->txt_step_box->toPlainText();
-
-
         //creating/ adding to current method list vvvvv
         if(its_main_step == true){
 
+            final_infomation::add_main_step_to_method(ui->txt_step_box->toPlainText());
+
+
             main_step_count ++;
-            string_method_list +=
-                    QString::number(main_step_count)
-                    + ". " + method_step + ",";
 
 
             //reset sub step count due to new main step being added
@@ -62,11 +62,7 @@ void creating_method::on_btn_add_method_step_released(){
         }
         else{
 
-            string_method_list +=
-                    "    " + QString::number(main_step_count)
-                    + "." + QString::number(sub_step_count)
-                    + ". "+ method_step + ",";
-
+            final_infomation::add_sub_step_to_method(ui->txt_step_box->toPlainText(), main_step_count);
 
             sub_step_count ++;
 
@@ -83,15 +79,10 @@ void creating_method::on_btn_add_method_step_released(){
         }
 
 
-        // displaying method in the text box vvvvv
-        //removing all commas in list
-        method_list = string_method_list.split(",");
-
-        //setting text box to full list of ingredients split up with a new line break
-        ui->txt_current_method->setText(method_list.join("\n"));
-
         //reseting text box
         ui->txt_step_box->setPlainText("");
+
+        ui->txt_current_method->setText(final_infomation::return_steps(-1, 0));
     }
 }
 
@@ -129,16 +120,21 @@ void creating_method::on_btn_next_released()
 {
     QMessageBox::StandardButton confirm_ingredients_list;
     confirm_ingredients_list = QMessageBox::question(this, "Confirm Method List", "Your final method list will be: \n" +
-                                                     method_list.join("\n") + " \n  Is this correct?",
+                                                     final_infomation::return_steps(-1, 0) + " \n  Is this correct?",
                                                      QMessageBox::Yes|QMessageBox::No);
 
 
     if(confirm_ingredients_list == QMessageBox::Yes){
-        final_infomation::final_method = string_method_list;
-
 
         this->hide();
         confirm_details = new confirm_final_details(this);
         confirm_details->show();
     }
+}
+
+void creating_method::on_btn_back_to_confirmation_released()
+{
+    this->hide();
+    confirm_details = new confirm_final_details(this);
+    confirm_details->show();
 }

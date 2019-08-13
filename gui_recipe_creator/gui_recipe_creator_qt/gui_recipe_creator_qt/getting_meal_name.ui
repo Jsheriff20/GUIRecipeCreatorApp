@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Getting Meal Name</string>
   </property>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_back">
    <property name="geometry">
     <rect>
      <x>780</x>
@@ -106,7 +106,7 @@
     <number>25</number>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_skip_to_confirmation">
+  <widget class="QPushButton" name="btn_back_to_confirmation">
    <property name="geometry">
     <rect>
      <x>780</x>
@@ -121,7 +121,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Skip to Confirmation</string>
+    <string>Back to Confirmation</string>
    </property>
   </widget>
  </widget>

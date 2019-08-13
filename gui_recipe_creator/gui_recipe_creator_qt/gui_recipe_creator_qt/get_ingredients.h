@@ -7,6 +7,7 @@
 
 class getting_meal_name;
 class creating_method;
+class confirm_final_details;
 
 namespace Ui {
 class get_ingredients;
@@ -29,10 +30,13 @@ private slots:
 
     void on_btn_next_released();
 
+    void on_btn_back_to_confirmation_released();
+
 private:
     Ui::get_ingredients *ui;
     getting_meal_name *get_meal_name;
     creating_method *create_method;
+    confirm_final_details *confirm_details;
 };
 
 #endif // GET_INGREDIENTS_H
