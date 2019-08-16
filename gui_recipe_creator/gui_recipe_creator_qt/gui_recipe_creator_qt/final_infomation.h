@@ -19,7 +19,7 @@ public:
 
     static QString final_meal_name;
     static QString final_ingredients_list;
-    static std::vector<std::vector<QString>> Final_method_vector;
+    static std::vector<std::vector<QString>> final_method_vector;
     static bool confirm_details_reached;
     static int all_confirmed;
     static bool btn_confirm_meal_name_clicked;

@@ -30,7 +30,11 @@ add place holders
 
 LEFT TO DO:
 complete confirm your meal details:
+ 
 
-when a user deletes a method step and it is a main step it will delete all of its sub steps as well, thefore if the user...
-trys to delete a main step have a pop up letting them know this will happen and suggest them to edit it instead...
-if they want to keep the sub steps
+delete button on method page:
+using the message box input delete that step number if it is a main step it will delete all of its sub steps as well...
+thefore if the user trys to delete a main step have a pop up letting them know this will happen and suggest them to ...
+edit it instead if they want to keep the sub steps
+
+just need to fix deleting the sub step (its deleting the whole main step)
